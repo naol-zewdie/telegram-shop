@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: var(--tg-theme-bg-color, #ffffff);
+  color: var(--tg-theme-text-color, #000000);
+}
+
+.border {
+  border-color: var(--tg-theme-hint-color, #e5e7eb);
+  opacity: 0.9;
+}
+
+.bg-gray-100 {
+  background-color: var(--tg-theme-secondary-bg-color, #f3f4f6) !important;
+}
+
+.text-gray-400, .text-gray-500 {
+  color: var(--tg-theme-hint-color, #9ca3af) !important;
+}
+
+.bg-blue-600 {
+  background-color: var(--tg-theme-button-color, #2563eb) !important;
+}
+
+.text-blue-600 {
+  color: var(--tg-theme-link-color, #2563eb) !important;
+}
+
+/* Form fields always get a solid white background with dark text,
+   regardless of Telegram's theme - otherwise dark-theme text color
+   inherited from body becomes invisible on a plain white input. */
+input, textarea, select {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-toast-in {
+  animation: toast-in 0.2s ease-out;
+}

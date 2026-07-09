@@ -1,0 +1,2 @@
+ALTER TABLE orders ADD COLUMN contact_name TEXT;
+ALTER TABLE orders ADD COLUMN phone TEXT;
